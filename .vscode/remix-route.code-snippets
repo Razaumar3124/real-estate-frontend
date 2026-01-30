@@ -1,0 +1,12 @@
+{
+  "Remix Route": {
+    "prefix": "rroute",
+    "body": [
+      "export default function Route() {",
+      "  return (",
+      "    <div>$1</div>",
+      "  );",
+      "}"
+    ]
+  }
+}
