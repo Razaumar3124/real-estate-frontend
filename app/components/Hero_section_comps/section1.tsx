@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import heroImage from "~/assets/images/Hero-section/HSimage1.jpg";
 
 type Section1Props = {
@@ -13,8 +13,7 @@ export default function Section1({
   height = "100vh",
 }: Section1Props) {
   return (
-    <Container
-      maxWidth="xl"
+    <Box
       sx={{
         bgcolor,
         height,
@@ -25,6 +24,7 @@ export default function Section1({
       }}
     >
       {children}
-    </Container>
+      <Typography>hello</Typography>
+    </Box>
   );
 }
