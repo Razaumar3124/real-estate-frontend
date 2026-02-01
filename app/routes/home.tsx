@@ -1,4 +1,4 @@
-import Section1 from "~/components/Hero_section_comps/section1";
+import Section1 from "~/components/Home_section_comps/section1";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -11,7 +11,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
-      <Section1 bgcolor="yellow"/>
+      <Section1 />
     </>
   );
 }
