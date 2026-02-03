@@ -1,6 +1,6 @@
 {
   "Remix Route": {
-    "prefix": "rroute",
+    "prefix": "rr",
     "body": [
       "export default function Route() {",
       "  return (",

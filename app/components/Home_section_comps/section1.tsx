@@ -1,5 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import heroImage from "~/assets/images/Hero-section/HSimage1.jpg";
+import ilr from "~/assets/images/Hero-section/interior-living-room.jpg"
+import ilr1 from "~/assets/images/Hero-section/interior-living-room1.jpg"
+import ilr2 from "~/assets/images/Hero-section/interior-living-room2.jpg"
 
 export default function Section1() {
   return (
@@ -12,7 +15,7 @@ export default function Section1() {
     >
       <Box
         component="img"
-        src={heroImage}
+        src={ilr}
         sx={{
           width: "100%",
           height: "100%",
@@ -23,11 +26,12 @@ export default function Section1() {
       <Typography
         sx={{
           position: "absolute",
-          bottom: {xs: "3%", lg: "6%"},
-          left: {xs: "6%",lg: "3%"},
-          fontSize: {xs: "30px", lg:"40px"},
+          bottom: {xs: "3%", lg: "8%"},
+          left: {xs: "6%",lg: "4%"},
+          fontSize: {xs: "30px", lg:"33px"},
+          fontWeight: 500,
           color: "white",
-          letterSpacing: {xs: "5px", lg: "5px"},
+          letterSpacing: {xs: "4px", lg: "5px"},
           lineHeight: "42px"
         }}
       >

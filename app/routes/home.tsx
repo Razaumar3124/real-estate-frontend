@@ -12,6 +12,8 @@ export default function Home() {
   return (
     <>
       <Section1 />
+      <Section1 />
+      <Section1 />
     </>
   );
 }
