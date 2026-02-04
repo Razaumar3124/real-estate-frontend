@@ -1,9 +1,15 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const lastScrollY = useRef(0);
+
+  const navData = [
+    { path: "/", navName: "SALES" },
+    { path: "/services", navName: "ABOUT US" },
+    { path: "/about", navName: "CONTACT" },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,19 +41,19 @@ export default function Navbar() {
         zIndex: 1300,
         transform: visible ? "translateY(0)" : "translateY(-100%)",
         transition: "transform 0.3s ease",
-        bgcolor: "black",
+        // bgcolor: "black",
         color: "white",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
-        gap: "38%",
+        gap: "28%",
       }}
     >
       <Box
       sx={{
         height: "60%",
         width: "14%",
-        border: "2px solid red"
+        border: "2px solid red",
       }}
       >
 
@@ -55,11 +61,34 @@ export default function Navbar() {
       <Box
       sx={{
         height: "60%",
-        width: "33%",
-        border: "2px solid red"
+        width: "32%",
+        border: "2px solid red",
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
       }}
       >
-
+        {navData.map((val, i)=>(
+          <Typography
+          key={i}
+          sx={{
+            fontFamily: "Afacad Flux",
+            fontSize: "1.1em",
+            color: "#583101",
+            letterSpacing: "1px",
+            cursor: "pointer",
+          }}
+          >{val.navName}</Typography>
+        ))}
+          <Typography
+          sx={{
+              fontFamily: "Afacad Flux",
+              fontSize: "1.1em",
+              color: "#583101",
+              letterSpacing: "1px",
+              cursor: "pointer",
+          }}
+          >MEDIA</Typography>
       </Box>
     </Box>
   );

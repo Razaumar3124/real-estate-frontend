@@ -6,6 +6,9 @@ body {
   padding: 0;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
 /* Your fonts */
 
 @font-face {
@@ -18,6 +21,20 @@ body {
 @font-face {
   font-family: "Cormorant Garamond";
   src: url("./assets/fonts/cormorant/CormorantGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Afacad Flux";
+  src: url("./assets/fonts/afacadflux/AfacadFlux-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Afacad Flux";
+  src: url("./assets/fonts/afacadflux/AfacadFlux-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }

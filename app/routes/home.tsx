@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Section1 />
-      <Section1 />
+      <div style={{height: "100vh", width: "100vw"}}></div>
       <Section1 />
     </>
   );
