@@ -49,7 +49,7 @@ export default function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
-        gap: "28%",
+        gap: "30%",
       }}
     >
       {/* LOGO */}
@@ -57,10 +57,19 @@ export default function Navbar() {
 
       {/* NAV LINKS */}
       <Box
+      component="button"
+      sx={{
+        display: {xs: "flex", md: "none"}
+      }}
+      >
+        Button
+      </Box>
+
+      <Box
         sx={{
           height: "60%",
           width: "32%",
-          display: "flex",
+          display: {xs: "none", md: "flex"},
           justifyContent: "space-around",
           alignItems: "center",
         }}
