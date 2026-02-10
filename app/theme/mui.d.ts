@@ -3,15 +3,31 @@ import "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface Palette {
     custom: {
-      theme1: string;
-      theme2: string;
+      light: string;
+      soft: string;
+      tan: string;
+      lightBronze: string;
+      camel: string;
+      faddedCopper: string;
+      toffeeBrown: string;
+      walnut: string;
+      mediumWalnut: string;
+      darkWalnut: string;
     };
   }
 
   interface PaletteOptions {
     custom?: {
-      theme1?: string;
-      theme2?: string;
+      light?: string;
+      soft?: string;
+      tan?: string;
+      lightBronze?: string;
+      camel?: string;
+      faddedCopper?: string;
+      toffeeBrown?: string;
+      walnut?: string;
+      mediumWalnut?: string;
+      darkWalnut?: string;
     };
   }
 }

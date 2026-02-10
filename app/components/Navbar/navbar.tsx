@@ -41,7 +41,7 @@ export default function Navbar() {
         top: 0,
         left: 0,
         width: "100%",
-        height: "16%",
+        height: {md: "16%", xl: "14%"},
         zIndex: 1300,
         transform: visible ? "translateY(0)" : "translateY(-100%)",
         transition: "transform 0.3s ease",
@@ -49,7 +49,7 @@ export default function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
-        gap: "30%",
+        gap: {sm: "30%", xl: "44%"},
       }}
     >
       {/* LOGO */}
@@ -68,7 +68,7 @@ export default function Navbar() {
       <Box
         sx={{
           height: "60%",
-          width: "32%",
+          width: {md: "32%", xl: "28%"},
           display: {xs: "none", md: "flex"},
           justifyContent: "space-around",
           alignItems: "center",
@@ -80,7 +80,7 @@ export default function Navbar() {
             onClick={() => navigate(val.path)}
             sx={{
               fontFamily: "Afacad Flux",
-              fontSize: "1.15em",
+              fontSize: {md: "1.15em", xl: "1em"},
               letterSpacing: "1px",
               cursor: "pointer",
             }}
@@ -95,7 +95,7 @@ export default function Navbar() {
           onClick={(e) => setMediaAnchor(e.currentTarget)}
           sx={{
             fontFamily: "Afacad Flux",
-            fontSize: "1.15em",
+            fontSize: {md: "1.15em", xl: "1em"},
             display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
@@ -124,7 +124,7 @@ export default function Navbar() {
             sx: {
               mt: 1.5,
               borderRadius: "12px",
-              minWidth: "230px",
+              minWidth: {md: "230px", xl: "200px"},
             },
           },
           list: {
@@ -137,11 +137,11 @@ export default function Navbar() {
           key={i}
           sx={{
             fontFamily: "Afacad Flux",
-            fontSize: "1.2em",
+            fontSize: {md: "1.2em", xl: "1em"},
             letterSpacing: "1px",
             color: "rgb(50,68,89)",
-            px: 3,
-            py: 1.5,
+            px: 2.5,
+            py: 1.4,
             cursor: "pointer",
           }}
           >

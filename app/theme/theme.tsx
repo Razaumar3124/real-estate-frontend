@@ -14,13 +14,21 @@ const theme = createTheme({
     },
 
     background: {
-      default: "#f5f7fa",
-      paper: "#ffffff",
+      default: "#FFEDD8",
+      paper: "#FFEDD8",
     },
 
     custom: {
-      theme1: "#306B73",
-      theme2: "#6AB8CC",
+      light: "#FFEDD8",
+      soft: "#F3D5B5",
+      tan: "#E7BC91",
+      lightBronze: "#D4A276",
+      camel: "#BC8A5F",
+      faddedCopper: "#A47148",
+      toffeeBrown: "#8B5E34",
+      walnut: "#6F4518",
+      mediumWalnut: "#603808",
+      darkWalnut: "#583101"
     },
   },
 
