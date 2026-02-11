@@ -2,6 +2,7 @@ import { Box, Typography, Menu, MenuItem } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { CiMenuFries } from "react-icons/ci";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
@@ -41,7 +42,7 @@ export default function Navbar() {
         top: 0,
         left: 0,
         width: "100%",
-        height: {md: "16%", xl: "14%"},
+        height: {xs: "14%", md: "16%", xl: "13%"},
         zIndex: 1300,
         transform: visible ? "translateY(0)" : "translateY(-100%)",
         transition: "transform 0.3s ease",
@@ -49,7 +50,7 @@ export default function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
-        gap: {sm: "30%", xl: "44%"},
+        gap: {xs: "48%",sm: "30%", xl: "44%"},
       }}
     >
       {/* LOGO */}
@@ -59,10 +60,16 @@ export default function Navbar() {
       <Box
       component="button"
       sx={{
-        display: {xs: "flex", md: "none"}
+        display: {xs: "flex", md: "none"},
+        bgcolor: "white",
+        p: "10px",
+        border: "none",
+        borderRadius: "50%",
+        justifyContent: "center",
+        alignItems: "center"
       }}
       >
-        Button
+        <CiMenuFries style={{fontSize: "1.5em"}}/>
       </Box>
 
       <Box
