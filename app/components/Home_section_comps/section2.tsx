@@ -22,7 +22,7 @@ export default function Section2() {
             letterSpacing: 5,
             display: "flex",
             textAlign: "center",
-            mt: {xs: 8,sm: 10,md: 13}
+            mt: {xs: 8,sm: 10,md: 13, xl: 11}
         }}
         >
             {/* Own Your Grandeur */}
@@ -33,12 +33,12 @@ export default function Section2() {
         <Typography
         component="h5"
         sx={{
-            color: "#2E4157",
-            width: {xs: "90%", sm: "87%", md: "70%"},
+            color: "#394B60",
+            width: {xs: "90%", sm: "87%", md: "70%", xl: "60%"},
             display: "flex",
             textAlign: "center",
             fontFamily: "Afacad Flux",
-            fontSize: {xs: "1.2em",md: "1.4em"},
+            fontSize: {xs: "1.2em",md: "1.4em", xl: "1.2em"},
             // color: theme.palette.custom.lightGrey,
             mt: {xs: 4,sm: 5, md: 6}
         }}

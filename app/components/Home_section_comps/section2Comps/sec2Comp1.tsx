@@ -4,20 +4,41 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CustomDropdown from "~/utils/customDropdown";
 
 const locations = [
-    "pune",
-    "baner",
-    "vimanagar"
+    "Kharadi",
+    "Magarpatta",
+    "Keshav Nagar",
+    "Mundhwa",
+    "Koregaon Park",
+    "Kalyani Nagar",
+    "Viman Nagar",
 ]
 
+const propertyType = [
+    "Residensial",
+    "Commercial",
+]
 
+const priceRange = [
+    "45L - 75L",
+    "75L - 1CR",
+    "1CR - 1.5CR",
+    "1.5CR - 2CR",
+    "2CR - 3CR",
+    "3CR - 5CR",
+    "5CR+"
+]
 
 export default function Sec2Comp1() {
   return (
     <Box
     sx={{
-        width: "91%",
+        width: {xs: "91%", xl: "85%"},
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "left",
+        flexWrap: "wrap",
+        columnGap: 1,
+        rowGap: 1, 
+        mt: 6
     }}
     >
         <TextField
@@ -30,6 +51,7 @@ export default function Sec2Comp1() {
                 borderRadius: "50px",
                 bgcolor: "white",
                 height: 45,
+                fontFamily: "Afacad Flux",
                 // Remove default border
                 "& fieldset": {
                     border: "none",
@@ -60,7 +82,23 @@ export default function Sec2Comp1() {
             />
 
         <CustomDropdown data={locations} placeholdername="Choose location"/>
-        <CustomDropdown data={locations} placeholdername="Property type"/>
+        <CustomDropdown data={propertyType} placeholdername="Property type"/>
+        <CustomDropdown data={priceRange} placeholdername="Price range"/>
+        
+        <Box
+        sx={{
+            color: "white",
+            bgcolor: "#2E4157",
+            width: "24.5%",
+            borderRadius: "50px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            letterSpacing: 4,
+        }}
+        >
+            SEARCH
+        </Box>
     </Box>
     
   );

@@ -18,6 +18,7 @@ export default function CustomDropdown({
             sx: {
                 bgcolor: "white",
                 borderRadius: "12px",   // optional: rounds the dropdown
+                fontFamily: "Afacad Flux"
             },
             },
         }}
@@ -35,6 +36,7 @@ export default function CustomDropdown({
             cursor: "pointer",
             height: 45,
             borderRadius: "50px",
+            fontFamily: "Afacad Flux",
             "& fieldset": { border: "none" },
             "&:hover fieldset": { border: "none" },
             "&.Mui-focused fieldset": { border: "none" },
