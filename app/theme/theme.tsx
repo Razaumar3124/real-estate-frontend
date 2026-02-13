@@ -20,6 +20,7 @@ const theme = createTheme({
 
     custom: {
       light: "#FFEDD8",
+      lightGrey: "rgb(50,68,89)",
       soft: "#F3D5B5",
       tan: "#E7BC91",
       lightBronze: "#D4A276",

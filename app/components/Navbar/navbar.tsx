@@ -1,17 +1,22 @@
-import { Box, Typography, Menu, MenuItem } from "@mui/material";
+import { Box, Typography, Menu, MenuItem, useTheme } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { CiMenuFries } from "react-icons/ci";
+import DropdownMenu from "~/utils/DropdownMenu";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const lastScrollY = useRef(0);
+  const theme = useTheme();
 
   const navigate = useNavigate();
 
-  const [mediaAnchor, setMediaAnchor] = useState<null | HTMLElement>(null);
-  const mediaOpen = Boolean(mediaAnchor);
+  const [mobileAnchor, setMobileAnchor] = useState<null | HTMLElement>(null);
+  const [desktopAnchor, setDesktopAnchor] = useState<null | HTMLElement>(null);
+
+  const mobileOpen = Boolean(mobileAnchor);
+  const desktopOpen = Boolean(desktopAnchor);
 
   const navData = [
     { path: "/", navName: "SALES" },
@@ -50,7 +55,7 @@ export default function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
-        gap: {xs: "48%",sm: "30%", xl: "44%"},
+        gap: {xs: "48%",md: "36%", xl: "44%"},
       }}
     >
       {/* LOGO */}
@@ -59,6 +64,7 @@ export default function Navbar() {
       {/* NAV LINKS */}
       <Box
       component="button"
+      onClick={(e) => setMobileAnchor(e.currentTarget)}
       sx={{
         display: {xs: "flex", md: "none"},
         bgcolor: "white",
@@ -72,10 +78,18 @@ export default function Navbar() {
         <CiMenuFries style={{fontSize: "1.5em"}}/>
       </Box>
 
+      <DropdownMenu
+        anchorEl={mobileAnchor}
+        open={mobileOpen}
+        onClose={() => setMobileAnchor(null)}
+        data={[...navData, ...mediaData]} // combine for mobile
+        onItemClick={(path) => navigate(path)}
+      />
+
       <Box
         sx={{
           height: "60%",
-          width: {md: "32%", xl: "28%"},
+          width: {md: "34%", xl: "28%"},
           display: {xs: "none", md: "flex"},
           justifyContent: "space-around",
           alignItems: "center",
@@ -98,8 +112,8 @@ export default function Navbar() {
 
         {/* MEDIA */}
         <Typography
-          onMouseEnter={(e) => setMediaAnchor(e.currentTarget)}
-          onClick={(e) => setMediaAnchor(e.currentTarget)}
+          onMouseEnter={(e) => setDesktopAnchor(e.currentTarget)}
+          onClick={(e) => setDesktopAnchor(e.currentTarget)}
           sx={{
             fontFamily: "Afacad Flux",
             fontSize: {md: "1.15em", xl: "1em"},
@@ -114,48 +128,13 @@ export default function Navbar() {
         </Typography>
 
         {/* DROPDOWN */}
-        <Menu
-        anchorEl={mediaAnchor}
-        open={mediaOpen}
-        // onClose={() => setMediaAnchor(null)}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-        slotProps={{
-          paper: {
-            sx: {
-              mt: 1.5,
-              borderRadius: "12px",
-              minWidth: {md: "230px", xl: "200px"},
-            },
-          },
-          list: {
-            onMouseLeave: () => setMediaAnchor(null),
-          },
-        }}
-      >
-        {mediaData.map((val, i)=>(
-          <Box
-          key={i}
-          sx={{
-            fontFamily: "Afacad Flux",
-            fontSize: {md: "1.2em", xl: "1em"},
-            letterSpacing: "1px",
-            color: "rgb(50,68,89)",
-            px: 2.5,
-            py: 1.4,
-            cursor: "pointer",
-          }}
-          >
-            {val.navName}
-          </Box>
-        ))}
-      </Menu>
+        <DropdownMenu
+          anchorEl={desktopAnchor}
+          open={desktopOpen}
+          onClose={() => setDesktopAnchor(null)}
+          data={mediaData}
+          onItemClick={(path) => navigate(path)}
+        />
       </Box>
     </Box>
   );

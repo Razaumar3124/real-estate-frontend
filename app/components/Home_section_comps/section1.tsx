@@ -1,5 +1,5 @@
 import { Box, Typography, Container } from "@mui/material";
-import ilr from "~/assets/images/Hero-section/interior-living-room.jpg"
+import ilr from "~/assets/images/Hero-section/heroImg6.jpg"
 
 export default function Section1() {
   return (

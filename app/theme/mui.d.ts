@@ -4,6 +4,7 @@ declare module "@mui/material/styles" {
   interface Palette {
     custom: {
       light: string;
+      lightGrey: string;
       soft: string;
       tan: string;
       lightBronze: string;
@@ -19,6 +20,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     custom?: {
       light?: string;
+      lightGrey?: string;
       soft?: string;
       tan?: string;
       lightBronze?: string;
