@@ -32,20 +32,20 @@ export default function Sec2Comp1() {
   return (
     <Box
     sx={{
-        width: {xs: "91%", xl: "85%"},
+        width: {xs: "88%", xl: "85%"},
         display: "flex",
         justifyContent: "left",
         flexWrap: "wrap",
         columnGap: 1,
         rowGap: 1, 
-        mt: 6
+        mt: 7
     }}
     >
         <TextField
             placeholder="Search"
             variant="outlined"
             sx={{
-                width: "49%",
+                width: {xs: "100%",md: "49%"},
                 cursor: "pointer",
                 "& .MuiOutlinedInput-root": {
                 borderRadius: "50px",
@@ -89,12 +89,18 @@ export default function Sec2Comp1() {
         sx={{
             color: "white",
             bgcolor: "#2E4157",
-            width: "24.5%",
+            width: {xs: "48.5%",md: "24.5%"},
             borderRadius: "50px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             letterSpacing: 4,
+            cursor: "pointer",
+            "&: hover": {
+                border: "1.3px solid #2E4157",
+                bgcolor: "inherit",
+                color: "#2E4157",
+            }
         }}
         >
             SEARCH

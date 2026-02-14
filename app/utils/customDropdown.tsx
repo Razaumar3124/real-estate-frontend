@@ -30,7 +30,7 @@ export default function CustomDropdown({
             />
         )}
         sx={{
-            width: "24.5%",
+            width: {xs: "48.5%",md: "24.5%"},
             "& .MuiOutlinedInput-root": {
             bgcolor: "white",
             cursor: "pointer",

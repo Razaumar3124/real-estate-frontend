@@ -20,9 +20,10 @@ export default function Section2() {
             fontWeight: "semi-bold",
             textTransform: "uppercase",
             letterSpacing: 5,
+            lineHeight: "40px",
             display: "flex",
             textAlign: "center",
-            mt: {xs: 8,sm: 10,md: 13, xl: 11}
+            mt: {xs: 8,sm: 10,md: 11}
         }}
         >
             {/* Own Your Grandeur */}
@@ -34,11 +35,12 @@ export default function Section2() {
         component="h5"
         sx={{
             color: "#394B60",
-            width: {xs: "90%", sm: "87%", md: "70%", xl: "60%"},
+            width: {xs: "88%", sm: "87%", md: "73%", xl: "60%"},
             display: "flex",
             textAlign: "center",
             fontFamily: "Afacad Flux",
-            fontSize: {xs: "1.2em",md: "1.4em", xl: "1.2em"},
+            fontSize: {xs: "1.1em",md: "1.2em", xl: "1.2em"},
+            lineHeight: "25px",
             // color: theme.palette.custom.lightGrey,
             mt: {xs: 4,sm: 5, md: 6}
         }}
@@ -46,6 +48,9 @@ export default function Section2() {
             With over 25 years of industry experience, Aspire & Co Real Estate brings deep market insight and a refined understanding of the luxury property landscape. Recognized for delivering exceptional results, Aspire & Co Real Estate has built a reputation grounded in integrity, transparency, and unwavering professionalism guiding clients through buying and selling with confidence, precision, and dedicated expertise.
         </Typography>
         <Sec2Comp1 />
+        <Box>
+
+        </Box>
         <Box sx={{height: "100vh"}}></Box>
     </Box>
   );
