@@ -38,11 +38,20 @@ export default function PropertiesCard() {
           bgcolor: "white",
         }}
       >
-        <CardMedia
-            sx={{ height: 160 }}
-            image={rowHouse}
-            title="green iguana"
-        />
+        <Box
+        sx={{
+          height: 160,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "end",
+        }}
+        >
+          <CardMedia
+              sx={{ height: "95%", width: "95%", borderRadius: "10px" }}
+              image={rowHouse}
+              title="green iguana"
+          />
+        </Box>
         <CardContent>
             <Typography gutterBottom variant="h5" sx={{fontFamily: "Afacad Flux", color: "#2E4157", display: "flex", alignItems: "end"}} component="div">
                 ₹ 94.0
