@@ -82,7 +82,6 @@ export default function Section2() {
         >
             VIEW ALL
         </Button>
-        <Box sx={{height: "100vh"}}></Box>
     </Box>
   );
 }
