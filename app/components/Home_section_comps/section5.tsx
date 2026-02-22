@@ -6,7 +6,6 @@ export default function Section5() {
     <Box
       sx={{
         minHeight: {xs: "600px", md: "500px"},
-        bgcolor: "red",
         backgroundImage: `url(${subscribeImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",

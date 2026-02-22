@@ -12,6 +12,7 @@ import "./app.css";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme/theme";
 import Navbar from "./components/Navbar/navbar";
+import Footer from "./components/Footer/footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -50,6 +51,7 @@ export default function App() {
       <CssBaseline />
       <Navbar />
       <Outlet />
+      <Footer />
     </ThemeProvider>
   );
 }
