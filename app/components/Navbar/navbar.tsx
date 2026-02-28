@@ -19,9 +19,9 @@ export default function Navbar() {
   const desktopOpen = Boolean(desktopAnchor);
 
   const navData = [
-    { path: "/", navName: "SALES" },
-    { path: "/services", navName: "ABOUT US" },
-    { path: "/about", navName: "CONTACT" },
+    { path: "/sales", navName: "SALES" },
+    { path: "/about", navName: "ABOUT US" },
+    { path: "/contact", navName: "CONTACT" },
   ];
 
   const mediaData = [

@@ -216,7 +216,7 @@ export default function Footer() {
         </Typography>
         <Box
         sx={{
-          display: "flex",
+          display: {xs: "none",md: "flex"},
           gap: 5,
           flexWrap: "wrap"
         }}

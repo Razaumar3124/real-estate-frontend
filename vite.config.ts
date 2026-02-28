@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [reactRouter(), tsconfigPaths()],
   server: {
     host: true,
-    port: 5173
+    port: 5173,
+    // allowedHosts: ["unthreaded-bucked-tiara.ngrok-free.dev"]
   }
 });
