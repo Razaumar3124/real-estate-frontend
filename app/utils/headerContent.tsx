@@ -26,8 +26,8 @@ export default function HeaderContent({
         component="img"
         src={img}
         sx={{
-          width: {xs: "100%", md: "99.5%"},
-          height: {xs: "100%", md: "98%"},
+          width: {xs: "99%", md: "99.5%"},
+          height: {xs: "99%", md: "98.5%"},
           objectFit: "cover",
           display: "block",
           borderRadius: 1
@@ -38,8 +38,8 @@ export default function HeaderContent({
       <Box
       sx={{
           position: "absolute",
-          width: {xs: "100%", md: "99.5%"},
-          height: {xs: "100%", md: "98%"},
+          width: {xs: "99%", md: "99.5%"},
+          height: {xs: "99%", md: "98.5%"},
           backgroundColor: "rgba(0, 0, 0, 0.25)",
           borderRadius: 1
       }}

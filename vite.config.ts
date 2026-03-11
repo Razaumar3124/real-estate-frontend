@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
-    // allowedHosts: ["unthreaded-bucked-tiara.ngrok-free.dev"]
+    allowedHosts: ["unthreaded-bucked-tiara.ngrok-free.dev"]
   }
 });
